@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;800&display=swap");
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root {
+	--primary-color: hsl(193, 38%, 86%);
+	--alt-color: hsl(150, 100%, 66%);
+}
+
+body {
+	font-family: "Manrope", sans-serif;
+}
+
+.page {
+	height: 100vh;
+	background-color: hsl(220, 22%, 16%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.page .card {
+	background-color: hsl(217, 19%, 24%);
+	display: flex;
+	position: relative;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-width: 500px;
+	border-radius: 10px;
+	height: 300px;
+	padding: 40px 20px;
+}
+
+.card > span {
+	letter-spacing: 4px;
+	font-size: 10px;
+	text-transform: uppercase;
+	color: var(--alt-color);
+	font-weight: 200;
+}
+
+.card > p {
+	margin: 20px 0px;
+	width: 93%;
+	font-size: 28px;
+	font-weight: 800;
+	color: var(--primary-color);
+	text-align: center;
+}
+
+.card > svg {
+	margin: 10px;
+}
+
+.card > button {
+	all: unset;
+	position: absolute;
+	bottom: -24px;
+	background-color: var(--alt-color);
+	padding: 13px 13px 10px;
+	border-radius: 999px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.card > button:hover {
+	box-shadow: 0px 0px 25px 0.5px var(--alt-color);
+}
+
+@media (max-width: 375px) {
+	.card {
+		width: 300px;
+	}
+}
+
+@media (max-width: 316px) {
+	.card {
+		width: 270px;
+		overflow-x: hidden;
+		overflow-y: initial;
+	}
+}
